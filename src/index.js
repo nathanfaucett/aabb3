@@ -4,14 +4,14 @@ var vec3 = require("vec3");
 var aabb3 = module.exports;
 
 
-function AABB2() {
+function AABB3() {
     this.min = vec3.create(Infinity, Infinity, Infinity);
     this.max = vec3.create(-Infinity, -Infinity, -Infinity);
 }
 
 
 aabb3.create = function(min, max) {
-    var out = new AABB2();
+    var out = new AABB3();
 
     min && vec3.copy(out.min, min);
     max && vec3.copy(out.max, max);
