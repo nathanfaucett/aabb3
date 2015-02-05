@@ -20,6 +20,7 @@
     "grunt-jsbeautifier": ""
   },
   "dependencies": {
+    "mathf": "nathanfaucett/mathf",
     "vec3": "nathanfaucett/vec3"
   }
 }
