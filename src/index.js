@@ -1,7 +1,7 @@
 var vec3 = require("vec3");
 
 
-var aabb3 = module.exports;
+var aabb3 = exports;
 
 
 function AABB3() {
@@ -13,8 +13,12 @@ function AABB3() {
 aabb3.create = function(min, max) {
     var out = new AABB3();
 
-    min && vec3.copy(out.min, min);
-    max && vec3.copy(out.max, max);
+    if (min) {
+        vec3.copy(out.min, min);
+    }
+    if (max) {
+        vec3.copy(out.max, max);
+    }
 
     return out;
 };
@@ -33,8 +37,12 @@ aabb3.clone = function(a) {
 
 aabb3.set = function(out, min, max) {
 
-    min && vec3.copy(out.min, min);
-    max && vec3.copy(out.max, max);
+    if (min) {
+        vec3.copy(out.min, min);
+    }
+    if (max) {
+        vec3.copy(out.max, max);
+    }
 
     return out;
 };
