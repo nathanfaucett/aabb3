@@ -246,3 +246,20 @@ aabb3.str = function(out) {
 
     return "AABB3(" + vec3.str(out.min) + ", " + vec3.str(out.max) + ")";
 };
+
+aabb3.toJSON = function(out, json) {
+    json = json || {};
+
+    json.min = vec3.copy(json.min || [], out.min);
+    json.max = vec3.copy(json.max || [], out.max);
+
+    return json;
+};
+
+aabb3.fromJSON = function(out, json) {
+
+    vec3.copy(out.min, json.min);
+    vec3.copy(out.max, json.max);
+
+    return json;
+};
