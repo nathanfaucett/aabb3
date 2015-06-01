@@ -71,10 +71,10 @@ aabb3.expandScalar = function(out, scalar) {
     return out;
 };
 
-aabb3.union = function(out, a) {
+aabb3.union = function(out, a, b) {
 
-    vec3.min(out.min, a.min);
-    vec3.max(out.max, a.max);
+    vec3.min(out.min, a.min, b.min);
+    vec3.max(out.max, a.max, b.max);
 
     return out;
 };
