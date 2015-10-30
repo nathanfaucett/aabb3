@@ -10,6 +10,8 @@ function AABB3() {
 }
 
 
+aabb3.AABB3 = AABB3;
+
 aabb3.create = function(min, max) {
     var out = new AABB3();
 
@@ -243,9 +245,10 @@ aabb3.notEqual = function(a, b) {
 };
 
 aabb3.str = function(out) {
-
     return "AABB3(" + vec3.str(out.min) + ", " + vec3.str(out.max) + ")";
 };
+
+aabb3.string = aabb3.toString = aabb3.str;
 
 aabb3.toJSON = function(out, json) {
     json = json || {};
