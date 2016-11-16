@@ -232,15 +232,15 @@ aabb3.fromCenterRadius = function(out, center, radius) {
 
 aabb3.equal = function(a, b) {
     return (
-        vec3.equal(a.min, b.min) ||
-        vec3.equal(a.max, b.max)
+        vec3.equals(a.min, b.min) ||
+        vec3.equals(a.max, b.max)
     );
 };
 
 aabb3.notEqual = function(a, b) {
     return (
-        vec3.notEqual(a.min, b.min) ||
-        vec3.notEqual(a.max, b.max)
+        vec3.notEquals(a.min, b.min) ||
+        vec3.notEquals(a.max, b.max)
     );
 };
 
